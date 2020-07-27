@@ -28,27 +28,27 @@
       var items = [
 //0 = buy, 1 = bought
         {
-          name: "cookies",
+          name: 'cookies',
           quantity: 5,
           listState: 0
         },
         {
-          name: "milk cartons",
+          name: 'milk cartons',
           quantity: 5,
           listState: 0
         },
         {
-          name: "apples",
+          name: 'apples',
           quantity: 10,
           listState: 0
         },
         {
-          name: "oranges",
+          name: 'oranges',
           quantity: 20,
           listState: 0
         },
         {
-          name: "cakes",
+          name: 'cakes',
           quantity: 100,
           listState: 0
         }
