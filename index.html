@@ -22,7 +22,7 @@
       }
     </style>
   </head>
-  <script src="angular.min.js" charset="utf-8"></script>
+  <script src="angular.min.js"></script>
   <script src="app.js"></script>
 <body ng-app = 'ShoppingListCheckOff'>
   <div class="container">
@@ -34,18 +34,18 @@
     <div class="col-md-6" ng-controller = "ToBuyController as ctrlBuy">
      <h2>To Buy:</h2>
      <ul>
-       <li ng-repeat = "item in ctrlBuy.items">Buy {{item.quantity}} {{item.name}}<button class="btn btn-default" ng-click = "ctrlBuy.moveItem(item.name)"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+       <li>Buy <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul>
-     <div class="emptyMessage">{{noMoreBuyItems}}</div>
+     <div class="emptyMessage"></div>
     </div>
 
     <!-- Already Bought List -->
     <div class="col-md-6" ng-controller = "AlreadyBoughtController as ctrlBot">
      <h2>Already Bought:</h2>
      <ul>
-       <li ng-repeat = "item in ctrlBot.items">Buy {{item.quantity}} {{item.name}}</li>
+       <li ng-repeat = "item in ctrlBot.items">Buy </li>
      </ul>
-     <div class="emptyMessage">{{noMoreBotItems}}</div>
+     <div class="emptyMessage"></div>
     </div>
   </div>
 </div>
