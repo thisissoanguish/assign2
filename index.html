@@ -36,7 +36,7 @@
      <ul>
        <li ng-repeat = "item in ctrlBuy.items">Buy {{item.quantity}} {{item.name}}<button class="btn btn-default" ng-click = "ctrlBuy.moveTheItem($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul>
-     <div ng-if = "ctrlBuy.showE" class="emptyMessage">All items bought!</div>
+     <div ng-if = "ctrlBuy.showE" class="emptyMessage">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
@@ -45,7 +45,7 @@
      <ul>
        <li ng-repeat = "item in ctrlBot.items">Bought {{item.quantity}} {{item.name}}</li>
      </ul>
-     <div ng-if = "ctrlBot.items.length == 0" class="emptyMessage">Nothing bought!</div>
+     <div ng-if = "ctrlBot.items.length == 0" class="emptyMessage">Nothing bought yet.</div>
     </div>
   </div>
 </div>
