@@ -34,18 +34,18 @@
     <div class="col-md-6" ng-controller = "ToBuyController as ctrlBuy">
      <h2>To Buy:</h2>
      <ul>
-       <li>Buy <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+       <li ng-repeat = "item in ctrlBuy.items">Buy {{item.quantity}} {{item.name}}<button class="btn btn-default" ng-click = "ctrlBuy.moveTheItem($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul>
-     <div class="emptyMessage"></div>
+     <div ng-if = "ctrlBuy.showE" class="emptyMessage">All items bought!</div>
     </div>
 
     <!-- Already Bought List -->
     <div class="col-md-6" ng-controller = "AlreadyBoughtController as ctrlBot">
      <h2>Already Bought:</h2>
      <ul>
-       <li ng-repeat = "item in ctrlBot.items">Buy </li>
+       <li ng-repeat = "item in ctrlBot.items">Bought {{item.quantity}} {{item.name}}</li>
      </ul>
-     <div class="emptyMessage"></div>
+     <div ng-if = "ctrlBot.items.length == 0" class="emptyMessage">Nothing bought!</div>
     </div>
   </div>
 </div>
